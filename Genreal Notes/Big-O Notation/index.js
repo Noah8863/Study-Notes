@@ -28,5 +28,36 @@ function summation(n){
  * If n is equal to 100,000 then the total count is 100,002 
  
     - This is an example of how Big-O has a time complexity based on the input size 
-
 */
+
+/**
+
+- Time complexity
+
+    - O(n) is linear 
+    This means, as the size of the input increases, the time complexity also increases. 
+
+ */
+
+
+//This is considered O(1). Which is constant  
+function summation(n){
+    return (n * (n+1) /2); //This will only run once regardless of the size of the input
+}
+
+
+//This is O(n^2) - Quadratic
+for (i = 1; i <= n; i++){
+    for (j = 1; j <= n; j++){
+        //Some Code   
+    }
+}
+
+//This is O(n^3) - Cubic
+for (i = 1; i <= n; i++){
+    for (j = 1; j <= n; j++){
+        for (k = 1; k <= n; k++){
+            //Some Code   
+        }  
+    }
+}

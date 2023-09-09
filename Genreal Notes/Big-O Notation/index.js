@@ -61,3 +61,66 @@ for (i = 1; i <= n; i++){
         }  
     }
 }
+
+// ----------------------------------------------------------------------------------- //
+
+// Big O Notation with Objects 
+
+const person = {
+    firstName: "Noah", 
+    lastName: "Hoffman"
+}
+
+/**
+    Looking at the time complexity with different actions:
+
+    Insert: O(1)
+    Remove: O(1)
+    Access: O(1)
+    Search: O(n) = Linear time complexity.  You may need to search the whole object for 'Hoffman' which would be (n). With (n) being the total data points in the object
+    Oject.key(): O(n) = Linear time complexity.  Similar with finding the key of a particular data point in the object
+
+*/
+
+// ----------------------------------------------------------------------------------- //
+
+// Big O Notation with Arrays 
+
+const odd = [1,3,5,7,9,11,13]
+
+/**
+    Looking at the time complexity with different actions:
+
+     Insert/Remove from the end: O(1)
+     Insert/Remove from the beginning: O(n)  Because the index has to be reset for every element in the array
+     Access: O(1)
+     Search: O(n) = Linear time complexity because the element can be the last in the array
+     Push/Pop: O(1) = Constant Time complexity
+     Shift/unshift/Concat/Slice/Splice: O(n)
+     Map/forEach/reduce/filter: O(n)
+
+*/
+
+//Using forEach with a callback function of forEach makes the time complexity quadratic 
+
+function findPairsWithSum(arr, targetSum) {
+    const result = [];
+  
+    arr.forEach((num1) => {             //O(n)^1
+      arr.forEach((num2) => {           //O(n)^2  This second forEach makes the time complexity quadratic
+        if (num1 + num2 === targetSum) {
+          result.push([num1, num2]);
+        }
+      });
+    });
+  
+    return result;
+  }
+  
+  const numbers = [1, 2, 3, 4, 5];
+  const target = 6;
+  
+  const pairs = findPairsWithSum(numbers, target);
+  
+  console.log(pairs); // Output: [ [ 1, 5 ], [ 2, 4 ], [ 3, 3 ], [ 4, 2 ], [ 5, 1 ] ]
+  

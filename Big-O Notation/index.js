@@ -122,5 +122,4 @@ function findPairsWithSum(arr, targetSum) {
   
   const pairs = findPairsWithSum(numbers, target);
   
-  console.log(pairs); // Output: [ [ 1, 5 ], [ 2, 4 ], [ 3, 3 ], [ 4, 2 ], [ 5, 1 ] ]
-  
+  console.log(pairs); // Output: [ [ 1, 5 ], [ 2, 4 ], [ 3, 3 ], [ 4, 2 ], [ 5, 1 ] ]  

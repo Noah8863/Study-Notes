@@ -62,6 +62,21 @@ for (i = 1; i <= n; i++){
     }
 }
 
+
+//This is O(logn) because on line 75, the input value is being divided by 2 every iteration. 
+function  isPowerOfTwo(n){
+    if( n < 1 ){     //Instantly get rid of any negative numbers or 0
+        return false;
+    }
+    while( n < 1 ){
+        if( n % 2 !== 0 ){  //If the number is divided all the way to 0, return false
+        return false;
+        }
+        n = n/2;    //Otherwise, n = n/2
+    }
+    return true;  
+}
+
 // ----------------------------------------------------------------------------------- //
 
 // Big O Notation with Objects 

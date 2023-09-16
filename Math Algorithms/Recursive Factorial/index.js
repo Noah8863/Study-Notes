@@ -20,4 +20,4 @@ console.log(Factorial(1)) //1
 console.log(Factorial(5)) //120
 
 
-//Big-O Time Complexity = O(n)
+//Big-O = O(n)

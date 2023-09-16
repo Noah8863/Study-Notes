@@ -52,7 +52,7 @@ function linearSearch(arr, target) {
     return -1
 }
 
-//Big-O time complexity = O(n)  because it has one for loop. As the size of the array increases, the number of executions increase. 
+//Big-O = O(n)  because it has one for loop. As the size of the array increases, the number of executions increase. 
 
 
 //Solution makes the function/algorithm more dynamic by allowing the array to be passed through as a parameter

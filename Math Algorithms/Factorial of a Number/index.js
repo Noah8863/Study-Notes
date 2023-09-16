@@ -23,7 +23,7 @@ console.log(factorial(0)) //1
 console.log(factorial(4)) //24
 console.log(factorial(5)) //120
 
-//Big-O = O(n) time complexity
+//Big-O = O(n)
 
 //More in-depth explaination behind the for loop logic 
 // For n = 5:

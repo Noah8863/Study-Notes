@@ -44,3 +44,24 @@ Repeast till all the unsorted elements are places in the right order
 //Now are array is sorted up to the 2nd index. 
 
 //Continue this until we we reach the final element in the array. Then the array will be sorted. 
+
+
+//Solution
+
+function insertionSort(arr){
+    for(let i = 1; i < arr.length; i++) {  //iterate through the unsorted part of the array
+        let numberToInsert = arr[i]  //We store the number to sort in each iteration
+        let j = i -1;
+        while(j > 0 && arr[j] > numberToInsert){
+            arr[j+1] = arr[j];
+            j = j-1
+        }
+        arr[j+1] = numberToInsert  //Insert the number to the right
+    }
+}
+
+//Big-O Notation: Log(n^2)  Because there is a while loop nested in a for loop
+
+const array = [ 8, 20, -2, 4, -6];
+insertionSort(array)
+console.log(array); // -6, -2, 4, 8, 20

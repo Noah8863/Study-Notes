@@ -51,3 +51,26 @@ Now that we have a single element array -> We start to concatenate
 
 [-6, -2, 4, 8, 20] is the final sorted array
 */
+
+
+function quickSort(arr) {
+    let pivot = arr[arr.length - 1]
+    let left = []
+    let right = []
+    for(let i = 0; i < arr.length - 1; i++){
+        if(arr[i] < pivot ){
+            left.push(arr[i])
+        } else {
+            right.push(arr[i])
+        }
+    }
+    return [...quickSort(left), pivot ,...quickSort(right)]   //pivot is in the middle because when you first started the sorting, you made left and right arrays. 
+}
+
+//Time Complexity
+
+// Worst Case - O(n^2)
+// Avg case - O(nlogn)
+
+const arr = [8, 20, -2, 4, -6]
+console.log(quickSort(arr)) //[-6, -2, 4, 8, 20]
